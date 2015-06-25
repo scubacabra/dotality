@@ -1,6 +1,7 @@
 - clean: ['~']
 
 - link:
+    ~/.dotfiles: ''
     ~/.gitconfig: gitconfig
     ~/.sbt: sbt/
     ~/.aws: aws/
