@@ -1,0 +1,7 @@
+[credential]
+	helper = osxkeychain
+[user]
+	name = Daniel Mijares
+	email = daniel.j.mijares@gmail.com
+[hub]
+	protocol = https
