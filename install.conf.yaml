@@ -6,6 +6,7 @@
     ~/.sbt: sbt/
     ~/.aws: aws/
     ~/.ansible: ansible/
+    ~/.oh-my-fish: oh-my-fish/
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
