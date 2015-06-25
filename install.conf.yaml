@@ -2,5 +2,9 @@
 
 - link:
     ~/.gitconfig: gitconfig
+    ~/.sbt: sbt/
+    ~/.aws: aws/
+    ~/.ansible: ansible/
 
-
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
