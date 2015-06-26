@@ -21,3 +21,8 @@ Plugin z
 Plugin gvm
 
 _prepend_path /usr/local/opt/coreutils/libexec/gnubin
+
+# AA docker variables
+set -gx DOCKER_HOST tcp://192.168.59.103:2376
+set -gx DOCKER_CERT_PATH /Users/jacobono/.boot2docker/certs/boot2docker-vm
+set -gx DOCKER_TLS_VERIFY 1
