@@ -11,3 +11,6 @@
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
+  - command: ./brew.sh
+    stdout: true
+    description: Install Homebrew (if necessary), install packages (if necessary), and update packages
