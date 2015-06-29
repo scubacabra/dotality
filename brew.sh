@@ -71,6 +71,7 @@ brew cask install kid3
 brew cask install calibre
 brew cask install disk-inventory-x
 brew cask install flux
+brew cask install quicksilver
 
 # cleanup outdated versions after updating
 brew cleanup
