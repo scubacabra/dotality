@@ -6,7 +6,7 @@ set fish_path $HOME/.oh-my-fish
 
 set Z_SCRIPT_PATH /usr/local/etc/profile.d/z.sh
 
-Theme bobthefish
+Theme agnoster
 
 Plugin emacs
 Plugin extract
