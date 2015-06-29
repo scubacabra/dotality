@@ -73,5 +73,15 @@ brew cask install disk-inventory-x
 brew cask install flux
 brew cask install quicksilver
 
+## AdAgility Specific
+
+# docker
+brew cask install virtualbox
+brew install docker
+brew install boot2docker/certs/boot2docker
+brew install ansible
+brew cask install google-drive
+brew cask install sonos
+
 # cleanup outdated versions after updating
 brew cleanup
