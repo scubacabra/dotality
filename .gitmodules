@@ -4,3 +4,6 @@
 [submodule "oh-my-fish"]
 	path = oh-my-fish
 	url = https://github.com/oh-my-fish/oh-my-fish.git
+[submodule ".emacs.d"]
+	path = .emacs.d
+	url = https://github.com/jacobono/.emacs.d.git
