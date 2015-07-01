@@ -9,6 +9,7 @@
     ~/.ansible: ansible/
     ~/.oh-my-fish: oh-my-fish/
     ~/.config/fish/config.fish: config/fish/config.fish
+    ~/.keysnail.js: keysnail.js
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
