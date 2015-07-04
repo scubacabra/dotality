@@ -10,6 +10,8 @@
     ~/.oh-my-fish: oh-my-fish/
     ~/.config/fish/config.fish: config/fish/config.fish
     ~/.keysnail.js: keysnail.js
+    ~/.lein: lein/
+    ~/.boot: boot/
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]

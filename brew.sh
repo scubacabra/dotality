@@ -42,6 +42,7 @@ brew install scala
 brew install ruby
 brew install python
 brew install leiningen
+brew install boot-clj
 
 # dbs
 brew install sqlite
