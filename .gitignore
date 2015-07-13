@@ -3,3 +3,4 @@ sbt/*/plugins/target
 sbt/*/target
 sbt/boot
 ansible/tmp
+boot/cache
