@@ -12,6 +12,7 @@
     ~/.keysnail.js: keysnail.js
     ~/.lein: lein/
     ~/.boot: boot/
+    ~/.itsalltext: itsalltext
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
