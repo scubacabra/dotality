@@ -4,3 +4,4 @@ sbt/*/target
 sbt/boot
 ansible/tmp
 boot/cache
+.DS_Store
