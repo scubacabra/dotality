@@ -1,7 +1,4 @@
-sbt/*/plugins/project
-sbt/*/plugins/target
-sbt/*/target
-sbt/boot
+sbt/*/
 ansible/tmp
 boot/cache
 .DS_Store
