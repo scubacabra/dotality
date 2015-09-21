@@ -9,6 +9,7 @@ brew upgrade
 
 # stuff for mac applications
 brew install caskroom/cask/brew-cask
+brew cask update
 brew tap caskroom/fonts
 
 # make sure to prepend '/usr/local/opt/coreutils/libexec/gnubin' to your path
@@ -76,13 +77,23 @@ brew cask install disk-inventory-x
 brew cask install flux
 brew cask install quicksilver
 brew cask install invisiblix
+brew cask install adobe-reader
+brew cask install gimp
+brew cask install licecap
+brew cask install gitter
+brew cask install growlnotify
+brew cask install unrarx
+brew cask install fitbit-connect
+brew cask install key-codes
+brew cask install keycastr
+brew cask install vuze
 
 ## AdAgility Specific
 
 # docker
 brew cask install virtualbox
 brew install docker
-brew install boot2docker/certs/boot2docker
+brew install docker-machine
 brew install ansible
 brew cask install google-drive
 brew cask install sonos
@@ -90,6 +101,7 @@ brew cask install sonos
 # fonts
 brew cask install font-meslo-lg-for-powerline
 brew cask install font-source-code-pro-for-powerline
+brew cask install font-hack
 
 # cleanup outdated versions after updating
 brew cleanup
