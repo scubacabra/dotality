@@ -4,6 +4,8 @@
 // Put all your code except special key, set*key, hook, blacklist.
 // ========================================================================= //
 //{{%PRESERVE%
+plugins.options["caret_hint.select_head_key"] = 's';
+plugins.options["caret_hint.select_tail_key"] = 'S';
 //}}%PRESERVE%
 // ========================================================================= //
 
