@@ -22,38 +22,63 @@ key.suspendKey           = "<f2>";
 
 // ================================= Hooks ================================= //
 
-
-hook.setHook('KeyBoardQuit', function (aEvent) {
-    if (key.currentKeySequence.length) return;
+hook.addToHook('KeyBoardQuit', function (aEvent) {
+    if (key.currentKeySequence.length)
+        return;
 
     command.closeFindBar();
 
     let marked = command.marked(aEvent);
 
-    if (util.isCaretEnabled()) {
-        if (marked) {
+    if (util.isCaretEnabled())
+    {
+        if (marked)
+        {
             command.resetMark(aEvent);
-        } else {
+        }
+        else
+        {
             if ("blur" in aEvent.target) aEvent.target.blur();
 
             gBrowser.focus();
             _content.focus();
         }
-    } else {
+
+	var i, children = document.getElementById("nav-bar").children;
+	for (i = 0; i < children.length; i++) {
+	    children[i].style.backgroundColor = null;
+	}
+
+	util.setBoolPref("accessibility.browsewithcaret", false);
+    }
+    else
+    {
         goDoCommand("cmd_selectNone");
     }
 
-    if (KeySnail.windowType === "navigator:browser" && !marked) {
+    if (KeySnail.windowType === "navigator:browser" && !marked)
+    {
         key.generateKey(aEvent.originalTarget, KeyEvent.DOM_VK_ESCAPE, true);
     }
 });
-
 
 // ============================= Key bindings ============================== //
 
 key.setGlobalKey('C-M-r', function (ev) {
     userscript.reload();
 }, 'Reload the initialization file', true);
+
+// {{ caret-mode
+
+key.setViewKey(['C-c','C-i'], function (ev, arg) {
+    var i, children = document.getElementById("nav-bar").children;
+    for (i = 0; i < children.length; i++) {
+	children[i].style.backgroundColor = "pink";
+    }
+    util.setBoolPref("accessibility.browsewithcaret", true);
+}, 'Enter to caret mode', true);
+
+// }}
 
 // {{ hok
 
