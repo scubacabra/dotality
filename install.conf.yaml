@@ -2,7 +2,7 @@
 
 - link:
     ~/.dotfiles: ''
-    ~/.emacs.d: .emacs.d/
+    ~/.emacs.d: emacs.d/
     ~/.gitconfig: gitconfig
     ~/.sbt: sbt/
     ~/.aws: aws/
