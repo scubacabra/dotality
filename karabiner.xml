@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<root>
+	<replacementdef>
+		<replacementname>EMACS_MODE_IGNORE_APPS</replacementname>
+		<replacementvalue>
+			EMACS,
+			TERMINAL,
+			X11,
+			FIREFOX,
+		</replacementvalue>
+	</replacementdef>
+</root>

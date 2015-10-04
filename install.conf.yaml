@@ -13,6 +13,7 @@
     ~/.lein: lein/
     ~/.boot: boot/
     ~/.itsalltext: itsalltext
+    ~/Library/Application Support/Karabiner/private.xml: karabiner.xml
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
