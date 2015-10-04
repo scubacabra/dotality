@@ -114,6 +114,10 @@ hook.setHook('KeyBoardQuit', function (aEvent) {
 // ============================= Key bindings ============================== //
 
 key.setGlobalKey(['C-c', 'C-f'], function (aEvent, aArg) {
+key.setGlobalKey('C-M-r', function (ev) {
+    userscript.reload();
+}, 'Reload the initialization file', true);
+
     ext.exec("hok-start-foreground-mode", aArg);
 }, 'Hok - Foreground hint mode', true);
 
@@ -144,10 +148,6 @@ key.setGlobalKey(['C-c', 'C-c', 'C-v'], function (ev) {
 key.setGlobalKey(['C-c', 'C-c', 'C-c'], function (ev) {
     command.clearConsole();
 }, 'Clear Javascript console', true);
-
-key.setGlobalKey('C-M-r', function (ev) {
-    userscript.reload();
-}, 'Reload the initialization file', true);
 
 key.setGlobalKey('M-x', function (ev, arg) {
     ext.select(arg, ev);
