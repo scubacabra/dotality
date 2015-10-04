@@ -253,11 +253,11 @@ key.setViewKey([['C-b'], [',']], function (ev) {
     key.generateKey(ev.originalTarget, KeyEvent.DOM_VK_LEFT, true);
 }, 'Scroll left');
 
-key.setViewKey([['M-v'], ['b']], function (ev) {
+key.setViewKey([['M-v'], ['u']], function (ev) {
     goDoCommand("cmd_scrollPageUp");
 }, 'Scroll page up');
 
-key.setViewKey('C-v', function (ev) {
+key.setViewKey([['C-v'], ['d']], function (ev) {
     goDoCommand("cmd_scrollPageDown");
 }, 'Scroll page down');
 
@@ -504,11 +504,11 @@ key.setCaretKey([['M-b'], ['W']], function (ev) {
     ev.target.ksMarked ? goDoCommand("cmd_selectWordPrevious") : goDoCommand("cmd_wordPrevious");
 }, 'Move caret to the left by word');
 
-key.setCaretKey([['C-v'], ['SPC']], function (ev) {
+key.setCaretKey([['C-v'], ['SPC'], ['d']], function (ev) {
     ev.target.ksMarked ? goDoCommand("cmd_selectPageNext") : goDoCommand("cmd_movePageDown");
 }, 'Move caret down by page');
 
-key.setCaretKey([['M-v'], ['b']], function (ev) {
+key.setCaretKey([['M-v'], ['u']], function (ev) {
     ev.target.ksMarked ? goDoCommand("cmd_selectPagePrevious") : goDoCommand("cmd_movePageUp");
 }, 'Move caret up by page');
 
