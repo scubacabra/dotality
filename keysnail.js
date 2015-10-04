@@ -4,56 +4,6 @@
 // Put all your code except special key, set*key, hook, blacklist.
 // ========================================================================= //
 //{{%PRESERVE%
-hook.setHook("PluginLoaded", function () {
-    if (!plugins.hok) return;
-
-    /* HoK 1.3.9+ required */
-    plugins.hok.pOptions.selector = plugins.hok.pOptions.selector
-    /* feedly */
-	+ ", *[data-uri]" + ", *[data-selector-toggle]" + ", *[data-page-action]" + ", *[data-app-action]"
-    /* google plus */
-	+ ", *[guidedhelpid]"
-    /* twitter */
-	+ ", *[data-item-count]";
-});
-
-key.setGlobalKey(["C-c","C-f"], function (aEvent, aArg) {
-    ext.exec("hok-start-foreground-mode", aArg);
-}, "Hok - Foreground hint mode", true);
-
-key.setGlobalKey(["C-c","C-b"], function (aEvent, aArg) {
-    ext.exec("hok-start-background-mode", aArg);
-}, "HoK - Background hint mode", true);
-
-key.setGlobalKey(["C-c","C-y"], function (aEvent, aArg) {
-    ext.exec("hok-yank-foreground-mode", aArg);
-}, "HoK - Background hint mode", true);
-
-key.setGlobalKey(["C-c",";"], function (aEvent, aArg) {
-    ext.exec("hok-start-extended-mode", aArg);
-}, "HoK - Extented hint mode", true);
-
-key.setGlobalKey(["C-c", "C-e"], function (aEvent, aArg) {
-    ext.exec("hok-start-continuous-mode", aArg);
-}, "Start continuous HaH", true);
-
-// {{ caret-mode
-key.setViewKey(['C-c','C-i'], function (ev, arg) {
-    var i, children = document.getElementById("nav-bar").children;
-    for (i = 0; i < children.length; i++) {
-	children[i].style.backgroundColor = "pink";
-    }
-    util.setBoolPref("accessibility.browsewithcaret", true);
-}, 'Enter to caret mode', true);
-
-key.setCaretKey(['C-c','C-i'], function (ev, arg) {
-    var i, children = document.getElementById("nav-bar").children;
-    for (i = 0; i < children.length; i++) {
-	children[i].style.backgroundColor = null;
-    }
-    util.setBoolPref("accessibility.browsewithcaret", false);
-}, 'Leave from caret mode', true);
-// }}
 //}}%PRESERVE%
 // ========================================================================= //
 
@@ -72,18 +22,6 @@ key.suspendKey           = "<f2>";
 
 // ================================= Hooks ================================= //
 
-hook.setHook('PluginLoaded', function () {
-    if (!plugins.hok) return;
-
-    /* HoK 1.3.9+ required */
-    plugins.hok.pOptions.selector = plugins.hok.pOptions.selector
-    /* feedly */
-	+ ", *[data-uri]" + ", *[data-selector-toggle]" + ", *[data-page-action]" + ", *[data-app-action]"
-    /* google plus */
-	+ ", *[guidedhelpid]"
-    /* twitter */
-	+ ", *[data-item-count]";
-});
 
 hook.setHook('KeyBoardQuit', function (aEvent) {
     if (key.currentKeySequence.length) return;
@@ -113,29 +51,46 @@ hook.setHook('KeyBoardQuit', function (aEvent) {
 
 // ============================= Key bindings ============================== //
 
-key.setGlobalKey(['C-c', 'C-f'], function (aEvent, aArg) {
 key.setGlobalKey('C-M-r', function (ev) {
     userscript.reload();
 }, 'Reload the initialization file', true);
 
+// {{ hok
+
+hook.setHook('PluginLoaded', function () {
+    if (!plugins.hok) return;
+
+    /* HoK 1.3.9+ required */
+    plugins.hok.pOptions.selector = plugins.hok.pOptions.selector
+    /* feedly */
+	+ ", *[data-uri]" + ", *[data-selector-toggle]" + ", *[data-page-action]" + ", *[data-app-action]"
+    /* google plus */
+	+ ", *[guidedhelpid]"
+    /* twitter */
+	+ ", *[data-item-count]";
+});
+
+key.setViewKey([['C-h', 'C-f'], ['f']], function (aEvent, aArg) {
     ext.exec("hok-start-foreground-mode", aArg);
 }, 'Hok - Foreground hint mode', true);
 
-key.setGlobalKey(['C-c', 'C-b'], function (aEvent, aArg) {
+key.setViewKey([['C-h', 'C-b'], ['b']], function (aEvent, aArg) {
     ext.exec("hok-start-background-mode", aArg);
 }, 'HoK - Background hint mode', true);
 
-key.setGlobalKey(['C-c', 'C-y'], function (aEvent, aArg) {
-    ext.exec("hok-yank-foreground-mode", aArg);
-}, 'HoK - Background hint mode', true);
-
-key.setGlobalKey(['C-c', 'C-;'], function (aEvent, aArg) {
+key.setViewKey(';', function (aEvent, aArg) {
     ext.exec("hok-start-extended-mode", aArg);
 }, 'HoK - Extented hint mode', true);
 
-key.setGlobalKey(['C-c', 'C-e'], function (aEvent, aArg) {
+key.setViewKey(['C-h', 'C-c'], function (aEvent, aArg) {
     ext.exec("hok-start-continuous-mode", aArg);
 }, 'Start continuous HaH', true);
+
+key.setViewKey([['C-h', 'C-y'], ['y']], function (aEvent, aArg) {
+    ext.exec("hok-yank-foreground-mode", aArg);
+}, 'Hok - Foreground yank hint mode', true);
+
+// }}
 
 key.setGlobalKey(['C-c', 'u'], function (ev) {
     undoCloseTab();
