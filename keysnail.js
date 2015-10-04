@@ -297,7 +297,7 @@ key.setViewKey(['C-x', 'h'], function (ev) {
     goDoCommand("cmd_selectAll");
 }, 'Select all', true);
 
-key.setViewKey('f', function (ev) {
+key.setViewKey('t', function (ev) {
     command.focusElement(command.elementsRetrieverTextarea, 0);
 }, 'Focus to the first textarea', true);
 
