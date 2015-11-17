@@ -7,8 +7,11 @@
     ~/.sbt: sbt/
     ~/.aws: aws/
     ~/.ansible: ansible/
-    ~/.oh-my-fish: oh-my-fish/
     ~/.config/fish/config.fish: config/fish/config.fish
+    ~/.config/omf/bundle: config/omf/bundle
+    ~/.config/omf/theme: config/omf/theme
+    ~/.config/omf/init.fish: config/omf/init.fish
+    ~/.config/omf/before.init.fish: config/omf/before.init.fish
     ~/.keysnail.js: keysnail.js
     ~/.lein: lein/
     ~/.boot: boot/

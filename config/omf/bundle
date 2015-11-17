@@ -1,0 +1,13 @@
+
+package brew
+package emacs
+package extract
+package https://github.com/oh-my-fish/plugin-balias.git
+package hub
+package osx
+package rbenv
+package tab
+package thefuck
+package tiny
+package z
+theme agnoster
