@@ -27,6 +27,9 @@ brew install fish
 # best editor ever
 brew install emacs --with-cocoa
 
+# fuck
+brew install thefuck
+
 # search stuff better
 brew install the_silver_surfer
 brew install z
@@ -41,10 +44,12 @@ brew install wget
 brew cask install java
 brew install sbt
 brew install scala
+brew install scalastyle
 brew install ruby
 brew install python
 brew install leiningen
 brew install boot-clj
+brew install rlwrap
 
 # dbs
 brew install sqlite
@@ -94,6 +99,7 @@ brew cask install vuze
 brew cask install virtualbox
 brew install docker
 brew install docker-machine
+brew install docker-compose
 brew install ansible
 brew cask install google-drive
 brew cask install sonos
